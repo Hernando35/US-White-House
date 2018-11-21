@@ -1,10 +1,11 @@
 document.getElementById("hide").style.display = "none";
 document.getElementById("loading").style.display = "block";
+
 var parties = ["r", "d", "i"];
 var repCheck = document.getElementById("rep");
 var demCheck = document.getElementById("dem");
 var indCheck = document.getElementById("ind");
-var selector = document.getElementById("state-selector");
+var myValue = document.getElementById("state-selector");
 var url = "";
 var headers = [];
 var staty = {
@@ -24,9 +25,9 @@ var staty = {
 bigData();
 
 function bigData() {
-    if (location.pathname == "/HTMLpageSenate-data.html") {
+    if (location.pathname == "/HTMLpageSenate.html") {
         getDataSenate();
-    } else if (location.pathname == "/HTMLpageHouse-data.html") {
+    } else if (location.pathname == "/HTMLpageHouse.html") {
         return getDataHouse();
     } else {
         return "This is a web default"
@@ -50,8 +51,7 @@ function getDataSenate() {
         yearsInOffice = data.results[0].seniority;
         porcentage = data.results[0].votes_with_party_pct;
         titles = data.results[0].title;
-
-        getTable(members);
+        getTableMembers(members);
         takeInfo(members);
         filterParty(data);
         displayLoader();
@@ -80,8 +80,7 @@ function getDataHouse() {
             yearsInOffice = data.results[0].seniority;
             porcentage = data.results[0].votes_with_party_pct;
             titles = data.results[0].title;
-
-            getTable(members);
+            getTableMembers(members);
             filterParty(data);
             takeInfo(members);
             displayLoader();
@@ -96,25 +95,25 @@ function getDataHouse() {
 function takeInfo(members) {
     repCheck.addEventListener("click", function () {
         var filteredArray = filterParty();
-        getTable(filteredArray);
+        getTableMembers(filteredArray);
     });
     demCheck.addEventListener("click", function () {
         var filteredArray = filterParty();
-        getTable(filteredArray);
+        getTableMembers(filteredArray);
     });
     indCheck.addEventListener("click", function () {
         var filteredArray = filterParty();
-        getTable(filteredArray)
+        getTableMembers(filteredArray)
     });
     myValue.addEventListener("change", function () {
         var newArray = filterByParty(members);
-        getTable(filteredArray);
+        getTableMembers(filteredArray);
     })
-    };
+};
 
 
 
-function getTable(members) {
+function getTableMembers(members) {
     var body = document.getElementById("senate-data");
     body.innerHTML = "";
     var tblBody = document.createElement("tbody");
@@ -138,7 +137,7 @@ function getTable(members) {
 function filterParty(data) {
     var array = [];
     for (var i = 0; i < members.length; i++) {
-           if (members[i].state === myValue.value || myValue.value === "All") {
+        if (members[i].state == myValue.value || myValue.value == "All") {
             if (repCheck.checked && members[i].party == "R") {
                 array.push(members[i])
             }
@@ -158,7 +157,7 @@ function filterParty(data) {
         }
     }
 
-return array;
+    return array;
 }
 
 

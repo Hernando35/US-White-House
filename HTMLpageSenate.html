@@ -1,169 +1,161 @@
 <!DOCTYPE html>
 <html>
-  <head>
+
+<head>
     <title>House</title>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
     <link rel="stylesheet" type="text/css" href="Styles/Stylish.css" />
-  </head>
-  <div id="loading"></div>
-  <body>
+</head>
+<div id="loading"></div>
+
+<body>
     <div class="header">
-      <div class="log">
-        <img
-          class="logo"
-          src="Styles/images/US-WhiteHouse-Logo.svg.png"
-          alt="White-House"
-        />
-      </div>
-      <div class="mail">
-        <img class="mailto" src="Styles/images/New_Logo_Gmail.svg.png" />
-        <a href="mailto:someone@example.com?Subject=Hello%20again" target="_top"
-          >info@tgif.net</a
-        >
-      </div>
+        <div class="log">
+            <img class="logo" src="Styles/images/US-WhiteHouse-Logo.svg.png" alt="White-House" />
+        </div>
+        <div class="mail">
+            <img class="mailto" src="Styles/images/New_Logo_Gmail.svg.png" />
+            <a href="mailto:someone@example.com?Subject=Hello%20again" target="_top">info@tgif.net</a>
+        </div>
     </div>
     <div class="navbar">
-      <a href="Home.html">Home</a>
-      <div class="dropdown">
-        <button class="dropbtn">
-          Congress 113 <i class="fa fa-caret-down"></i>
-        </button>
-        <div class="dropdown-content">
-          <a href="HTMLpageHouse.html"> House </a><br />
-          <a> Senate </a>
+        <a href="Home.html">Home</a>
+        <div class="dropdown">
+            <button class="dropbtn">
+                Congress 113 <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+                <a href="HTMLpageHouse.html"> House </a><br />
+                <a> Senate </a>
+            </div>
         </div>
-      </div>
-      <div class="dropdown">
-        <button class="dropbtn">
-          Attendance <i class="fa fa-caret-down"></i>
-        </button>
-        <div class="dropdown-content">
-          <a href="houseAttendance.html"> House </a>
-          <a href="SenateAttendance.html">Senate</a>
+        <div class="dropdown">
+            <button class="dropbtn">
+                Attendance <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+                <a href="houseAttendance.html"> House </a>
+                <a href="SenateAttendance.html">Senate</a>
+            </div>
         </div>
-      </div>
-      <div class="dropdown">
-        <button class="dropbtn">
-          Party Loyalty <i class="fa fa-caret-down"></i>
-        </button>
-        <div class="dropdown-content">
-          <a href="HousePartyLoyalty.html"> House </a>
-          <a href="SenatePartyLoyalty.html"> Senate </a>
+        <div class="dropdown">
+            <button class="dropbtn">
+                Party Loyalty <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+                <a href="HousePartyLoyalty.html"> House </a>
+                <a href="SenatePartyLoyalty.html"> Senate </a>
+            </div>
         </div>
-      </div>
     </div>
     <div class="container1">
-      <h2>Senators</h2>
-      <p>
-        First convened in 1789, the composition and powers of the Senate are
-        established in Article One of the U.S. Constitution. Each state is
-        represented by two senators, regardless of population, who serve
-        staggered six-year terms. The Senate has several exclusive powers not
-        granted to the House, including consenting to treaties as a precondition
-        to their ratification and consenting to or confirming appointments of
-        Cabinet secretaries, federal judges, other federal executive officials,
-        military officers, regulatory officials, ambassadors, and other federal
-        uniformed officers, as well as trial of federal officials impeached by
-        the House.
-      </p>
+        <h2>Senators</h2>
+        <p>
+            First convened in 1789, the composition and powers of the Senate are
+            established in Article One of the U.S. Constitution. Each state is
+            represented by two senators, regardless of population, who serve
+            staggered six-year terms. The Senate has several exclusive powers not
+            granted to the House, including consenting to treaties as a precondition
+            to their ratification and consenting to or confirming appointments of
+            Cabinet secretaries, federal judges, other federal executive officials,
+            military officers, regulatory officials, ambassadors, and other federal
+            uniformed officers, as well as trial of federal officials impeached by
+            the House.
+        </p>
     </div>
     <div class="middelbox">
-      <div class="filters">
-        <form method="get">
-          <b class="filter">Filter by party: </b>
-          <label for="repu">Republican</label>
-          <input type="checkbox" id="rep" name="parties" value="R" />
-          <label for="demo">Democrat</label>
-          <input type="checkbox" id="dem" name="parties" value="D" />
-          <label for="inde">Independient</label>
-          <input type="checkbox" id="ind" name="parties" value="I" />
-        </form>
-      </div>
-      <div class="choose">
-        <form method="get">
-          <b class="filter">Filter by state: </b> <label for="sta"></label>
-          <select id="state-selector">
-            <option value="All" seleted> All</option>
-            <option value="AK">Alaska</option>
-            <option value="AL">Alabama</option>
-            <option value="AK">Arizona</option>
-            <option value="AR">Arkansas</option>
-            <option value="CA">California</option>
-            <option value="CO">Colorado</option>
-            <option value="CN">Connecticut</option>
-            <option value="DE">Delaware</option>
-            <option value="FL">Florida</option>
-            <option value="GA">Georgia</option>
-            <option value="HI">Hawaii</option>
-            <option value="IO">Idaho</option>
-            <option value="IL">Illinois</option>
-            <option value="IN">Indiana</option>
-            <option value="IA">Iowa</option>
-            <option value="KS">Kansas</option>
-            <option value="KY">Kentucky</option>
-            <option value="LA">Louisiana</option>
-            <option value="ME">Maine</option>
-            <option value="MD">Maryland</option>
-            <option value="MA">Massachusetts</option>
-            <option value="MI">Michigan</option>
-            <option value="MN">Minnesota</option>
-            <option value="MS">Mississippi</option>
-            <option value="MO">Missouri</option>
-            <option value="MT">Montana</option>
-            <option value="NE">Nebraska</option>
-            <option value="NV">Nevada</option>
-            <option value="NH">New Hampshire</option>
-            <option value="NM">New Mexico</option>
-            <option value="NY">New York</option>
-            <option value="NC">North Carolina</option>
-            <option value="ND">North Dakota</option>
-            <option value="OH">Ohio</option>
-            <option value="OK">Oklahoma</option>
-            <option value="OR">Oregon</option>
-            <option value="PA">Pennsylvania</option>
-            <option value="RI">Rhode Island</option>
-            <option value="SC">South Caroline</option>
-            <option value="SD">South Dakota</option>
-            <option value="TN">Tennessee</option>
-            <option value="OR">Texas</option>
-            <option value="PA">Utah</option>
-            <option value="RI">Vermont</option>
-            <option value="SC">Virginia</option>
-            <option value="SD">Washington</option>
-            <option value="TN">West Virginia</option>
-            <option value="SD">Wisconsin</option>
-            <option value="TN">Wyoming</option>
-          </select>
-        </form>
-      </div>
-      <div class="table-striped" id="hide">
-        <table>
-          <tr class="c">
-            <th class="col1">Name</th>
-            <th class="col2">Party</th>
-            <th class="col3">State</th>
-            <th class="col4">Y. in office</th>
-            <th class="part">% of votes</th>
-            <th class="sir">Title</th>
-          </tr>
-          <tbody
-            id="senate-data"
-            value="Generate table."
-            onclick="getTableMembers(members)"
-          ></tbody>
-        </table>
-      </div>
+        <div class="filters">
+            <form method="get">
+                <b class="filter">Filter by party: </b>
+                <label for="repu">Republican</label>
+                <input type="checkbox" id="rep" name="parties" value="R" />
+                <label for="demo">Democrat</label>
+                <input type="checkbox" id="dem" name="parties" value="D" />
+                <label for="inde">Independient</label>
+                <input type="checkbox" id="ind" name="parties" value="I" />
+            </form>
+        </div>
+        <div class="choose">
+            <form method="get">
+                <b class="filter">Filter by state: </b> <label for="sta"></label>
+                <select id="state-selector">
+                    <option value="All" seleted> All</option>
+                    <option value="AK">Alaska</option>
+                    <option value="AL">Alabama</option>
+                    <option value="AK">Arizona</option>
+                    <option value="AR">Arkansas</option>
+                    <option value="CA">California</option>
+                    <option value="CO">Colorado</option>
+                    <option value="CN">Connecticut</option>
+                    <option value="DE">Delaware</option>
+                    <option value="FL">Florida</option>
+                    <option value="GA">Georgia</option>
+                    <option value="HI">Hawaii</option>
+                    <option value="IO">Idaho</option>
+                    <option value="IL">Illinois</option>
+                    <option value="IN">Indiana</option>
+                    <option value="IA">Iowa</option>
+                    <option value="KS">Kansas</option>
+                    <option value="KY">Kentucky</option>
+                    <option value="LA">Louisiana</option>
+                    <option value="ME">Maine</option>
+                    <option value="MD">Maryland</option>
+                    <option value="MA">Massachusetts</option>
+                    <option value="MI">Michigan</option>
+                    <option value="MN">Minnesota</option>
+                    <option value="MS">Mississippi</option>
+                    <option value="MO">Missouri</option>
+                    <option value="MT">Montana</option>
+                    <option value="NE">Nebraska</option>
+                    <option value="NV">Nevada</option>
+                    <option value="NH">New Hampshire</option>
+                    <option value="NM">New Mexico</option>
+                    <option value="NY">New York</option>
+                    <option value="NC">North Carolina</option>
+                    <option value="ND">North Dakota</option>
+                    <option value="OH">Ohio</option>
+                    <option value="OK">Oklahoma</option>
+                    <option value="OR">Oregon</option>
+                    <option value="PA">Pennsylvania</option>
+                    <option value="RI">Rhode Island</option>
+                    <option value="SC">South Caroline</option>
+                    <option value="SD">South Dakota</option>
+                    <option value="TN">Tennessee</option>
+                    <option value="OR">Texas</option>
+                    <option value="PA">Utah</option>
+                    <option value="RI">Vermont</option>
+                    <option value="SC">Virginia</option>
+                    <option value="SD">Washington</option>
+                    <option value="TN">West Virginia</option>
+                    <option value="SD">Wisconsin</option>
+                    <option value="TN">Wyoming</option>
+                </select>
+            </form>
+        </div>
+        <div class="table-striped" id="hide">
+            <table>
+                <tr class="c">
+                    <th class="col1">Name</th>
+                    <th class="col2">Party</th>
+                    <th class="col3">State</th>
+                    <th class="col4">Y. in office</th>
+                    <th class="part">% of votes</th>
+                    <th class="sir">Title</th>
+                </tr>
+                <tbody id="senate-data" value="Generate table." onclick="getTableMembers(members)"></tbody>
+            </table>
+        </div>
     </div>
     <div class="foo">
-      <footer><p>&#174; 2016 TGIF | All Rights Reserved.</p></footer>
+        <footer>
+            <p>&#174; 2016 TGIF | All Rights Reserved.</p>
+        </footer>
     </div>
-    <script type="text/javascript" src="Scripts/main.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-  </body>
+    <script type="text/javascript" src="Scripts/JavaScriptSenateHouse.js"></script>
+</body>
+
 </html>

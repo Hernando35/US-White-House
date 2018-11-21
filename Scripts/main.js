@@ -1,5 +1,8 @@
-document.getElementById("hide").style.display = "none";
-document.getElementById("loading").style.display = "block";
+var parties = ["R", "D", "I"];
+var repCheck = document.getElementById("rep");
+var demCheck = document.getElementById("dem");
+var indCheck = document.getElementById("ind");
+var myValue = document.getElementById("state-selector");
 var loading = true;
 var url = "";
 var headers = [];
@@ -21,15 +24,16 @@ var staty = {
 bigData();
 
 function bigData() {
-    if (
-        location.pathname == "/SenateAttendance.html" || location.pathname == "/SenateParty_Loyalty.html"
+    if (location.pathname == "/SenateAttendance.html" ||
+        location.pathname == "/SenatePartyLoyalty.html" ||
+        location.pathname == "/HTMLpageSenate.html"
     ) {
         getDataSenate();
-    } else if (
-        location.pathname == "/houseAttendance.html" ||
-        location.pathname == "/House_Party_Loyalty.html"
+    } else if (location.pathname == "/houseAttendance.html" ||
+        location.pathname == "/HousePartyLoyalty.html" ||
+        location.pathname == "/HTMLpageHouse.html"
     ) {
-        getDataHouse();
+        return getDataHouse();
     } else {
         return "This is a web default";
     }
@@ -46,19 +50,26 @@ function getDataSenate() {
             return response.json();
         })
         .then(function (data) {
-            showpage();
+
             members = data.results[0].members;
             party = data.results[0].party;
             porcentage = data.results[0].votes_with_party_pct;
-            loading = false;
-            getNumber();
+            state = data.results[0].state;
+            yearsInOffice = data.results[0].seniority;
+            titles = data.results[0].title;
+            getNumber(data);
             getBottomAvg(data);
             getTopAvg(data);
+            displayLoader();
+            showpage();
+            loading = false;
+
         })
         .catch(function (error) {
             console.log("Request failed", error);
         });
 }
+
 
 function getDataHouse() {
     fetch("https://api.propublica.org/congress/v1/113/house/members.json", {
@@ -71,23 +82,28 @@ function getDataHouse() {
             return response.json();
         })
         .then(function (data) {
-            showpage();
             console.log(data);
+
             members = data.results[0].members;
             party = data.results[0].party;
             porcentage = data.results[0].votes_with_party_pct;
-            loading = false;
-            getNumber();
+            state = data.results[0].state;
+            yearsInOffice = data.results[0].seniority;
+            getNumber(data);
             getBottomAvg(data);
             getTopAvg(data);
+            displayLoader();
+            showpage();
+            loading = false;
         })
         .catch(function (error) {
             console.log("Request failed", error);
         });
 }
 
+
 //Function 1 for Table 1
-function getNumber() {
+function getNumber(data) {
     let demArray = [];
     let repArray = [];
     let indArray = [];
@@ -99,6 +115,7 @@ function getNumber() {
     for (var i = 0; i < members.length; i++) {
         if (members[i].party === "D") {
             demArray.push(members[i]);
+            console.log(demArray.push(members[i]));
             total_dem += members[i].votes_with_party_pct;
         }
         if (members[i].party === "R") {
@@ -147,6 +164,8 @@ function getTable() {
     }
     table.appendChild(tblBody);
 }
+
+
 
 //function 2 for table 2
 function getBottomAvg(data) {
@@ -204,7 +223,7 @@ function getTopAvg(data) {
             tenPct.push(values[i]);
             most += values[i].votes_with_party_pct;
         } else if (
-            tenPct[tenPct.length - 1].votes_with_party_pct ==
+            tenPct[tenPct.length - 1].votes_with_party_pct ===
             values[i].votes_with_party_pct
         ) {
             tenPct.push(values[i]);
@@ -239,8 +258,22 @@ function displayLoader() {
     start = setTimeout(showpage, 2000);
 }
 
+//document.getElementById("hide").style.display = "none";
+//document.getElementById("loading").style.display = "block";
+
 function showpage() {
     document.getElementById("hide").style.display = "block";
     document.getElementById("loading").style.display = "none";
+}
 
+function loadMore() {
+    var text = document.getElementById("more_text");
+    var buttonMessage = document.getElementById("readmore");
+    if (text.style.display === "block") {
+        text.style.display = "none";
+        buttonMessage.innerHTML = "Read more";
+    } else {
+        text.style.display = "block";
+        buttonMessage.innerHTML = "Read less";
+    }
 }

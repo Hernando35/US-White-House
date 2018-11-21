@@ -2,7 +2,7 @@ html {
     position: relative;
     width: 90%;
     min-height: 100uv;
-    background: url("backy.jpg");
+    background: url("images/backy.jpg");
     filter: grayscale(25%);
     width: 99%;
 }
@@ -16,7 +16,7 @@ body {
 .header {
     display: flex;
     justify-content: center;
-    background: url("Nylon-American-Flag-closeup.jpg");
+    background: url("images/Nylon-American-Flag-closeup.jpg");
     width: 1250px;
     margin-left: 12%;
 }
@@ -90,6 +90,9 @@ body {
     background-color: #0000ff;
 }
 
+.collapse {
+    display: none;
+}
 .dropdown-content {
     display: none;
     position: absolute;
