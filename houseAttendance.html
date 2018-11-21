@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Attendance Senate</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" type="text/css" href="Styles/Stylish.css" />
+  </head>
+
+  <body>
+    <div id="loading"></div>
+    <div class="header">
+      <div class="log">
+        <img
+          class="logo"
+          src="Styles/images/US-WhiteHouse-Logo.svg.png"
+          alt="White-House"
+        />
+      </div>
+      <div class="mail">
+        <img class="mailto" src="Styles/images/New_Logo_Gmail.svg.png" />
+        <a href="mailto:someone@example.com?Subject=Hello%20again" target="_top"
+          >info@tgif.net</a
+        >
+      </div>
+    </div>
+    <div class="navbar">
+      <a href="Home.html">Home</a>
+      <div class="dropdown">
+        <button class="dropbtn">
+          Congress 113 <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content">
+          <a href="HTMLpageHouse.html"> House </a><br />
+          <a href="HTMLpageSenate.html"> Senate </a>
+        </div>
+      </div>
+      <div class="dropdown">
+        <button class="dropbtn">
+          Attendance <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content">
+          <a> House </a> <a href="SenateAttendance.html"> Senate </a>
+        </div>
+      </div>
+      <div class="dropdown">
+        <button class="dropbtn">
+          Party Loyalty <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content">
+          <a href="HousePartyLoyalty.html"> House </a>
+          <a href="SenatePartyLoyalty.html"> Senate </a>
+        </div>
+      </div>
+    </div>
+    <div class="middelChild">
+      <div class="container3">
+        <h2>Attendance</h2>
+        <p>
+          The Constitution specifies that a majority of members constitutes a
+          quorum to do business in each house. Representatives and senators
+          rarely force the presence of a quorum by demanding quorum calls; thus,
+          in most cases, debates continue even if a majority is not present. The
+          Senate uses roll-call votes; a clerk calls out the names of all the
+          senators, each senator stating "aye" or "no" when his or her name is
+          announced. The House reserves roll-call votes for the most formal
+          matters, as a roll-call of all 435 representatives takes quite some
+          time; normally, members vote by electronic device. In the case of a
+          tie, the motion in question fails. In the Senate, the Vice President
+          may (if present) cast the tiebreaking vote.
+        </p>
+      </div>
+      <div class="table-striped1" id="hide">
+        <h2 class="glance">Senate at a glance</h2>
+        <table id="porcentage2" value="Generate table." onclick="getTable()">
+          <tbody>
+            <tr>
+              <th>Party</th>
+              <th>Number of Missed Votes</th>
+              <th>% Missed</th>
+            </tr>
+            <tr>
+              <th>Republican</th>
+              <td id="rep-ttl"></td>
+              <td id="rep-avg"></td>
+            </tr>
+            <tr>
+              <th>Democrat</th>
+              <td id="dem-ttl"></td>
+              <td id="dem-avg"></td>
+            </tr>
+            <tr>
+              <th>Independient</th>
+              <td id="ind-ttl"></td>
+              <td id="ind-avg"></td>
+            </tr>
+            <tr>
+              <th>Total</th>
+              <td id="total"></td>
+              <td id="totalAveg"></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="table-striped2">
+        <h2 class="fewest">Least Engaged (Bottom 10% Attendance)</h2>
+        <table value="Generate table." onclick="getTable2(members)">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Number of missed Votes</th>
+              <th>% Missed</th>
+            </tr>
+          </thead>
+          <tbody id="bottomList"></tbody>
+        </table>
+      </div>
+      <div class="table-striped3">
+        <h2 class="mostly">Most Engaged (Top 10% Attendance)</h2>
+        <table value="Generate table" onclick="getTable3(members)">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Number of missed Votes</th>
+              <th>% Missed</th>
+            </tr>
+          </thead>
+          <tbody id="topList" class="collateral"></tbody>
+        </table>
+      </div>
+    </div>
+    <div class="foo">
+      <footer><p>&#174; 2016 TGIF | All Rights Reserved.</p></footer>
+    </div>
+    <script src="Scripts/main.js"></script>
+  </body>
+</html>

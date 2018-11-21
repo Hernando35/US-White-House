@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Attendance Senate</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" type="text/css" href="Styles/Stylish.css" />
+  </head>
+  <body>
+    <div id="loading"></div>
+    <div class="header">
+      <div class="log">
+        <img
+          class="logo"
+          src="Styles/images/US-WhiteHouse-Logo.svg.png"
+          alt="White-House"
+        />
+      </div>
+      <div class="mail">
+        <img class="mailto" src="Styles/images/New_Logo_Gmail.svg.png" />
+        <a href="mailto:someone@example.com?Subject=Hello%20again" target="_top"
+          >info@tgif.net</a
+        >
+      </div>
+    </div>
+    <div class="navbar">
+      <a href="Home.html">Home</a>
+      <div class="dropdown">
+        <button class="dropbtn">
+          Congress 113 <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content">
+          <a href="HTMLpageHouse.html"> House </a><br />
+          <a href="HTMLpageSenate.html"> Senate </a>
+        </div>
+      </div>
+      <div class="dropdown">
+        <button class="dropbtn">
+          Attendance <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content">
+          <a href="houseAttendance.html"> House </a>
+          <a href="SenateAttendance.html"> Senate </a>
+        </div>
+      </div>
+      <div class="dropdown">
+        <button class="dropbtn">
+          Party Loyalty <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content">
+          <a href="HousePartyLoyalty.html"> House </a> <a> Senate </a>
+        </div>
+      </div>
+    </div>
+    <div class="middelChild">
+      <div class="container3">
+        <h2>Party Loyalty</h2>
+        <p>
+          Those who consider themselves to be strong partisans, strong Democrats
+          and strong Republicans respectively, tend to be the most faithful in
+          voting for their party's nominee for office and legislation that backs
+          their party's agenda..
+        </p>
+      </div>
+      <div class="table-striped1" id="hide">
+        <h2 class="glance">Senate at a glance</h2>
+        <table id="porcentage2" value="Generate table." onclick="getTable()">
+          <tbody>
+            <tr>
+              <th>Party</th>
+              <th>Number of Missed Votes</th>
+              <th>% Missed</th>
+            </tr>
+            <tr>
+              <th>Republican</th>
+              <td id="rep-ttl"></td>
+              <td id="rep-avg"></td>
+            </tr>
+            <tr>
+              <th>Democrat</th>
+              <td id="dem-ttl"></td>
+              <td id="dem-avg"></td>
+            </tr>
+            <tr>
+              <th>Independient</th>
+              <td id="ind-ttl"></td>
+              <td id="ind-avg"></td>
+            </tr>
+            <tr>
+              <th>Total</th>
+              <td id="total"></td>
+              <td id="totalAveg"></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="table-striped2">
+        <h2 class="fewest">Least Loyal (Bottom 10% of party)</h2>
+        <table value="Generate table." onclick="getTable2(members)">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Number Party Votes</th>
+              <th>% Party Votes</th>
+            </tr>
+          </thead>
+          <tbody id="bottomList"></tbody>
+        </table>
+      </div>
+      <div class="table-striped3">
+        <h2 class="mostly">Most Loyal (Top 10% Party)</h2>
+        <table value="Generate table" onclick="getTable3(members)">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Number Party Votes</th>
+              <th>% Party Votes</th>
+            </tr>
+          </thead>
+          <tbody id="topList" class="collateral"></tbody>
+        </table>
+      </div>
+    </div>
+    <div class="foo">
+      <footer><p>&#174; 2016 TGIF | All Rights Reserved.</p></footer>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="Scripts/main.js"></script>
+  </body>
+</html>
