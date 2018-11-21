@@ -25,9 +25,9 @@ var staty = {
 bigData();
 
 function bigData() {
-    if (location.pathname == "/HTMLpageSenate.html") {
+    if (location.pathname == "/html/pageSenate.html") {
         getDataSenate();
-    } else if (location.pathname == "/HTMLpageHouse.html") {
+    } else if (location.pathname == "/html/pageHouse.html") {
         return getDataHouse();
     } else {
         return "This is a web default"
