@@ -25,10 +25,10 @@ var staty = {
 bigData();
 
 function bigData() {
-    if (window.location.href == "http://127.0.0.1:49710/pageHouse.html") {
+    if (window.location.pathname == "/pageHouse.html") {
         getDataSenate();
     } 
-    else if (window.location.href == "http://127.0.0.1:49710/pageSenate.html") {
+    else if (window.location.pathname == "/pageSenate.html") {
         return getDataHouse();
     } else {
         return "This is a web default"
