@@ -25,10 +25,9 @@ var staty = {
 bigData();
 
 function bigData() {
-    if (window.location.pathname == "/pageHouse.html") {
-        getDataSenate();
-    } 
-    else if (window.location.pathname == "/pageSenate.html") {
+    if (window.location.href == "https://hernando35.github.io/USWhiteHouse/pageSenate.html") {
+        return getDataSenate();
+    } else if (window.location.href == "https://hernando35.github.io/USWhiteHouse/pageHouse.html") {
         return getDataHouse();
     } else {
         return "This is a web default"
