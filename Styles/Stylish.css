@@ -333,7 +333,9 @@ tr:nth-child(even) {
     [class*="col-"] {
         width: 100%;
     }
-    
+    body{
+        width: 650px;
+    }
     .header {
     display: flex;
     justify-content: center;
