@@ -357,17 +357,8 @@ tr:nth-child(even) {
     margin-left: 100px;
 }
     
-    .header {
-    display: flex;
-    justify-content: center;
-    background: url("images/Nylon-American-Flag-closeup.jpg");
-    max-width: 450px;
-    margin-left: 100px;
-}
-    
     .table-striped {
     padding-top: 30px;
-    padding-right: 10%;
     width: 450px;
 }
     .container1 {
