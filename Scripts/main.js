@@ -24,15 +24,13 @@ var staty = {
 bigData();
 
 function bigData() {
-    if (location.pathname == "/senateAttendance.html" ||
-        location.pathname == "/senatePartyLoyalty.html" ||
-        location.pathname == "/pageSenate.html"
-    ) {
+    if (window.location.pathname == "/senateAttendance.html" ||
+        window.location.pathname == "/senatePartyLoyalty.html" )
+     {
         getDataSenate();
-    } else if (location.pathname == "/houseAttendance.html" ||
-        location.pathname == "/housePartyLoyalty.html" ||
-        location.pathname == "/pageHouse.html"
-    ) {
+    } else if (window.location.pathname == "/houseAttendance.html" ||
+        window.location.pathname == "/housePartyLoyalty.html"  )
+    {
         return getDataHouse();
     } else {
         return "This is a web default";
