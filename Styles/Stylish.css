@@ -405,4 +405,11 @@ tr:nth-child(even) {
           width: 450px;
           font: 8px;
     }
+    
+    .table-striped td {
+    position: relative;
+    text-align: center;
+    padding: 8px 10px;
+    justify-content: center;
+}
 }
