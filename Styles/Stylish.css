@@ -391,4 +391,8 @@ tr:nth-child(even) {
     background: #ccd9ff;
     margin-left: 0%;
 }
+    #senate-data{
+          width: 450px;
+          font: 8px;
+    }
 }
