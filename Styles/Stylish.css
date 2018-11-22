@@ -385,7 +385,6 @@ tr:nth-child(even) {
     background: #ccd9ff;
     width: 450px;
     justify-content: center;
-    justify-content: space-around;
     margin-left: 100px;
 
 }
