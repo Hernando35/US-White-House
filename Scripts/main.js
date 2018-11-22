@@ -23,10 +23,11 @@ var staty = {
 
 bigData();
 function bigData() {
-    if (window.location.ref == "https://hernando35.github.io/USWhiteHouse/senateAttendance.html" ||
+    if (window.location.ref == 
+        "https://hernando35.github.io/USWhiteHouse/senateAttendance.html" ||
         window.location.ref == "https://hernando35.github.io/USWhiteHouse/senatePartyLoyalty.html" )
      {
-        getDataSenate();
+       return getDataSenate();
     } else if (window.location.ref == "https://hernando35.github.io/USWhiteHouse/houseAttendance.html" ||
         window.location.ref == "https://hernando35.github.io/USWhiteHouse/housePartyLoyalty.html"  )
     {
