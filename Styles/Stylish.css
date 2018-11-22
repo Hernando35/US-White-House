@@ -381,6 +381,15 @@ tr:nth-child(even) {
     padding-left: 100px;
     font-size: 10px;
 }
+    .middelbox {
+    background: #ccd9ff;
+    width: 450px;
+    justify-content: center;
+    justify-content: space-around;
+    margin-left: 100px;
+
+}
+    
     .foo {
     overflow: hidden;
     font-family: Arial, Helvetica, sans-serif;
