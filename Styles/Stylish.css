@@ -264,14 +264,14 @@ h2 {
 .table-striped td {
     position: relative;
     text-align: center;
-    padding: 10px 50px;
+    padding: 8px 50px;
     justify-content: center;
 }
 
 td {
     position: relative;
     text-align: center;
-    padding: 10px 50px;
+    padding: 8px 50px;
     justify-content: center;
 }
 
@@ -282,7 +282,7 @@ th {
 .table-striped {
     padding-top: 30px;
     padding-right: 10%;
-    width: 100%;
+    width: 950px;
 }
 
 tr:nth-child(even) {
@@ -297,7 +297,7 @@ tr:nth-child(even) {
 }
 
 .table-striped1 {
-    padding-right: 7%;
+    margin-right: 7%;
     padding-top: 5%;
     border-bottom: 1px;
     border-bottom-color: rgb(201, 76, 76);
@@ -305,13 +305,13 @@ tr:nth-child(even) {
 
 .table-striped2 {
     margin-top: 2%;
-    margin-left: 4%;
+    margin-left: 2%;
     background: #cceeff;
 }
 
 .table-striped3 {
     margin-top: 2%;
-    margin-right: -0.5%;
+    margin-right: 5%;
     background: #cceeff;
 }
 
@@ -326,4 +326,29 @@ tr:nth-child(even) {
     width: 850px;
     background: #ccd9ff;
     margin-left: 0%;
+}
+
+@media only screen and (max-width: 768px) {
+    /* For mobile phones: */
+    [class*="col-"] {
+        width: 100%;
+    }
+    
+    .navbar {
+    overflow: hidden;
+    background-color: #ccd9ff;
+    font-family: Arial, Helvetica, sans-serif;
+    border: 5px;
+    border-color: black;
+    margin-top: 0px;
+    width: 450px;
+    display: inline-flex;
+    justify-content: center;
+    margin-left: 200px;
+}
+    .table-striped {
+    padding-top: 30px;
+    padding-right: 10%;
+    width: 450px;
+}
 }
