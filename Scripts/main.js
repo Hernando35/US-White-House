@@ -22,7 +22,6 @@ var staty = {
 };
 
 bigData();
-
 function bigData() {
     if (window.location.pathname == "/senateAttendance.html" ||
         window.location.pathname == "/senatePartyLoyalty.html" )
