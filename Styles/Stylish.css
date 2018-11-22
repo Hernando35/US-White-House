@@ -1,24 +1,27 @@
 html {
     position: relative;
-    width: 90%;
-    min-height: 100uv;
-    background: url("images/backy.jpg");
-    filter: grayscale(25%);
-    width: 99%;
+    max-width: 1050px;
 }
 
+
 body {
-    position: relative;
-    width: 100%;
+/*    position: relative;*/
+    width: 1050px;
     min-height: 100uv;
+    width: 1050px;
+    min-height: 100uv;
+    background: url("https://image.ibb.co/kY92QV/back-Ground-White-House.jpg");
+    filter: grayscale(25%);
+    background-repeat: repeat;
+    justify-content: center;
 }
 
 .header {
     display: flex;
     justify-content: center;
     background: url("images/Nylon-American-Flag-closeup.jpg");
-    width: 1250px;
-    margin-left: 12%;
+    max-width: 865px;
+    margin-left: 200px;
 }
 
 .logo {
@@ -55,10 +58,10 @@ body {
     border: 5px;
     border-color: black;
     margin-top: 0px;
-    width: 1250px;
+    width: 850px;
     display: inline-flex;
     justify-content: center;
-    margin-left: 12%;
+    margin-left: 200px;
 }
 
 .navbar a {
@@ -93,6 +96,7 @@ body {
 .collapse {
     display: none;
 }
+
 .dropdown-content {
     display: none;
     position: absolute;
@@ -125,32 +129,44 @@ body {
     flex-basis: auto;
     align-self: center;
     justify-content: center;
-    width: 75%;
+    width: 850px;
     padding-bottom: 35px;
-    padding-left: 12%;
+    padding-left: 200px;
     font-size: 19px;
 }
 
 #loading {
-  border: 16px solid #f3f3f3;
-  border-radius: 50%;
-  border-top: 16px solid #3498db;
-  width: 120px;
-  height: 120px;
-  -webkit-animation: spin 2s linear infinite; /* Safari */
-  animation: spin 2s linear infinite;
+    border: 16px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 16px solid #3498db;
+    width: 120px;
+    height: 120px;
+    -webkit-animation: spin 2s linear infinite;
+    /* Safari */
+    animation: spin 2s linear infinite;
 }
 
 /* Safari */
 @-webkit-keyframes spin {
-  0% { -webkit-transform: rotate(0deg); }
-  100% { -webkit-transform: rotate(360deg); }
+    0% {
+        -webkit-transform: rotate(0deg);
+    }
+
+    100% {
+        -webkit-transform: rotate(360deg);
+    }
 }
 
 @keyframes spin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
 }
+
 .container2 {
     display: flex;
     align-items: center;
@@ -184,7 +200,7 @@ h2 {
     width: 50%;
     padding-left: 6%;
     word-spacing: 8px;
-    
+
 }
 
 .filters b {
@@ -193,7 +209,7 @@ h2 {
 }
 
 .filter {
-      margin-top: 55%;
+    margin-top: 55%;
 }
 
 .choose {
@@ -211,12 +227,12 @@ h2 {
 }
 
 .middelbox {
-    background: #ccd9ff; 
+    background: #ccd9ff;
     width: 1050px;
     justify-content: center;
     margin-left: 12%;
     padding-left: 12%;
-    
+
 }
 
 .c {
@@ -231,18 +247,20 @@ h2 {
 
 .col2 {
     padding-left: 90px;
-      }
-.col3{
+}
+
+.col3 {
     padding-left: 3px;
 }
 
-.part{
+.part {
     padding-right: 60px;
 }
-.sir{
+
+.sir {
     padding-right: 90px;
 }
-    
+
 .table-striped td {
     position: relative;
     text-align: center;
@@ -287,7 +305,7 @@ tr:nth-child(even) {
 
 .table-striped2 {
     margin-top: 2%;
-    margin-left: 4%; 
+    margin-left: 4%;
     background: #cceeff;
 }
 
@@ -305,8 +323,7 @@ tr:nth-child(even) {
     margin-top: 20px;
     text-align: center;
     margin-bottom: 35px;
-    width: 1250px;
+    width: 850px;
     background: #ccd9ff;
-    margin-left: 12%;
+    margin-left: 0%;
 }
-
