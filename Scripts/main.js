@@ -24,14 +24,14 @@ var staty = {
 bigData();
 
 function bigData() {
-    if (location.pathname == "/html/senateAttendance.html" ||
-        location.pathname == "/html/senatePartyLoyalty.html" ||
-        location.pathname == "/html/pageSenate.html"
+    if (location.pathname == "/senateAttendance.html" ||
+        location.pathname == "/senatePartyLoyalty.html" ||
+        location.pathname == "/pageSenate.html"
     ) {
         getDataSenate();
-    } else if (location.pathname == "/html/houseAttendance.html" ||
-        location.pathname == "/html/housePartyLoyalty.html" ||
-        location.pathname == "/html/pageHouse.html"
+    } else if (location.pathname == "/houseAttendance.html" ||
+        location.pathname == "/housePartyLoyalty.html" ||
+        location.pathname == "/pageHouse.html"
     ) {
         return getDataHouse();
     } else {

@@ -4,11 +4,13 @@
     <title>Attendance Senate</title>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
-    <link rel="stylesheet" type="text/css" href="/Styles/Stylish.css" />
+    <link rel="stylesheet" type="text/css" href="Styles/Stylish.css" />
   </head>
 
   <body>
@@ -17,25 +19,26 @@
       <div class="log">
         <img
           class="logo"
-          src="/Styles/images/US-WhiteHouse-Logo.svg.png"
-          alt="White-House"/>
+          src="Styles/images/US-WhiteHouse-Logo.svg.png"
+          alt="White-House"
+        />
       </div>
       <div class="mail">
-        <img class="mailto" src="/Styles/images/New_Logo_Gmail.svg.png" />
+        <img class="mailto" src="Styles/images/New_Logo_Gmail.svg.png" />
         <a href="mailto:someone@example.com?Subject=Hello%20again" target="_top"
           >info@tgif.net</a
         >
       </div>
     </div>
     <div class="navbar">
-      <a href="/html/index.html">Home</a>
+      <a href="index.html">Home</a>
       <div class="dropdown">
         <button class="dropbtn">
           Congress 113 <i class="fa fa-caret-down"></i>
         </button>
         <div class="dropdown-content">
-          <a href="/html/pageHouse.html"> House </a><br />
-          <a href="/html/pageSenate.html"> Senate </a>
+          <a href="pageHouse.html"> House </a><br />
+          <a href="pageSenate.html"> Senate </a>
         </div>
       </div>
       <div class="dropdown">
@@ -43,7 +46,7 @@
           Attendance <i class="fa fa-caret-down"></i>
         </button>
         <div class="dropdown-content">
-          <a href="/html/houseAttendance.html"> House </a> <a> Senate </a>
+          <a> House </a> <a href="senateAttendance.html"> Senate </a>
         </div>
       </div>
       <div class="dropdown">
@@ -51,22 +54,22 @@
           Party Loyalty <i class="fa fa-caret-down"></i>
         </button>
         <div class="dropdown-content">
-          <a href="/html/housePartyLoyalty.html"> House </a>
-          <a href="/html/senatePartyLoyalty.html"> Senate </a>
+          <a href="housePartyLoyalty.html"> House </a>
+          <a href="SenatePartyLoyalty.html"> Senate </a>
         </div>
       </div>
     </div>
     <div class="middelChild">
       <div class="container3">
-        <h2 class="title">Attendance</h2>
-        <p class="para">
+        <h2>Attendance</h2>
+        <p>
           The Constitution specifies that a majority of members constitutes a
           quorum to do business in each house. Representatives and senators
           rarely force the presence of a quorum by demanding quorum calls; thus,
-          in most cases, debates continue even if a majority is not present.<br />
-          The Senate uses roll-call votes; a clerk calls out the names of all
-          the senators, each senator stating "aye" or "no" when his or her name
-          is announced. The House reserves roll-call votes for the most formal
+          in most cases, debates continue even if a majority is not present. The
+          Senate uses roll-call votes; a clerk calls out the names of all the
+          senators, each senator stating "aye" or "no" when his or her name is
+          announced. The House reserves roll-call votes for the most formal
           matters, as a roll-call of all 435 representatives takes quite some
           time; normally, members vote by electronic device. In the case of a
           tie, the motion in question fails. In the Senate, the Vice President
@@ -115,7 +118,7 @@
               <th>% Missed</th>
             </tr>
           </thead>
-          <tbody id="bottomList" class="table3"></tbody>
+          <tbody id="bottomList"></tbody>
         </table>
       </div>
       <div class="table-striped3">
@@ -128,15 +131,13 @@
               <th>% Missed</th>
             </tr>
           </thead>
-          <tbody id="topList" class="table4"></tbody>
+          <tbody id="topList" class="collateral"></tbody>
         </table>
       </div>
     </div>
     <div class="foo">
       <footer><p>&#174; 2016 TGIF | All Rights Reserved.</p></footer>
     </div>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <script type="text/javascript"   src="/Scripts/main.js"></script>
+    <script type="text/javascript"    src="Scripts/main.js"></script>
   </body>
 </html>
