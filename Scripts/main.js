@@ -23,12 +23,12 @@ var staty = {
 
 bigData();
 function bigData() {
-    if (window.location.pathname == "https://hernando35.github.io/senateAttendance.html" ||
-        window.location.pathname == "https://hernando35.github.io/senatePartyLoyalty.html" )
+    if (window.location.ref == "https://hernando35.github.io/senateAttendance.html" ||
+        window.location.ref == "https://hernando35.github.io/senatePartyLoyalty.html" )
      {
         getDataSenate();
-    } else if (window.location.pathname == "https://hernando35.github.io/houseAttendance.html" ||
-        window.location.pathname == "https://hernando35.github.io/housePartyLoyalty.html"  )
+    } else if (window.location.ref == "https://hernando35.github.io/houseAttendance.html" ||
+        window.location.ref == "https://hernando35.github.io/housePartyLoyalty.html"  )
     {
         return getDataHouse();
     } else {
